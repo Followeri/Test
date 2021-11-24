@@ -1,0 +1,19 @@
+This is the code for the paper:
+
+"Exploring Cross-domain Consistency for Composed Query Image Retrieval" Submission to CVPR ID 7022
+
+(1) FashionIQ:
+Creat files "dress","shirt", and "toptee" to save the outputs.
+dress: python train.py --dataset fashioniq --name dress --max_decay_epoch 20 --img_weight 1.0 --class_weight 1.0 --mul_kl_weight 1.0 --model_dir ./dress --num_epochs 50
+shirt: python train.py --dataset fashioniq --name shirt  --max_decay_epoch 20 --img_weight 1.0 --class_weight 1.0 --mul_kl_weight 1.0 --model_dir ./shirt --num_epochs 50
+toptee: python train.py --dataset fashioniq --name toptee  --max_decay_epoch 20 --img_weight 1.0 --class_weight 1.0 --mul_kl_weight 1.0 --model_dir ./toptee --num_epochs 50
+
+(2) Shoes:
+Creat files "shoes" to save the outputs.
+python train.py --dataset shoes  --max_decay_epoch 30 --img_weight 1.0 --class_weight 1.0 --mul_kl_weight 1.0 --model_dir ./shoes --num_epochs 50
+
+(3) Fashion200K:
+Creat files "Fashion200k" to save the outputs.
+python train.py --dataset fashion200k  --img_weight 1.0 --class_weight 1.0 --mul_kl_weight 1.0 --model_dir ./fashion200k --num_epochs 40
+
+The pre-trained models are stored in the following URLs. ``https://anonymous.4open.science/r/Test-C02F''.
